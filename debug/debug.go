@@ -36,9 +36,9 @@ func ShowBytes(x interface{}, size int, representation Representation) {
 	for i := 0; i < size; i++ {
 		switch representation {
 		case Hexa:
-			fmt.Printf("%x ", *(*byte)(unsafe.Pointer((uintptr(p) + uintptr(i)))))
+			fmt.Printf("%.2x ", *(*byte)(unsafe.Pointer((uintptr(p) + uintptr(i)))))
 		case Binary:
-			fmt.Printf("%b ", *(*byte)(unsafe.Pointer((uintptr(p) + uintptr(i)))))
+			fmt.Printf("%.8b ", *(*byte)(unsafe.Pointer((uintptr(p) + uintptr(i)))))
 		}
 
 	}
