@@ -24,11 +24,23 @@ func ShowBytes(x interface{}, size int, representation Representation) {
 		p = unsafe.Pointer(y)
 	case *float64:
 		p = unsafe.Pointer(y)
+	case *float32:
+		p = unsafe.Pointer(y)
+	case *uint:
+		p = unsafe.Pointer(y)
+	case *uint64:
+		p = unsafe.Pointer(y)
 	case *int32:
 		p = unsafe.Pointer(y)
 	case *int16:
 		p = unsafe.Pointer(y)
 	case *int8:
+		p = unsafe.Pointer(y)
+	case *uint32:
+		p = unsafe.Pointer(y)
+	case *uint16:
+		p = unsafe.Pointer(y)
+	case *uint8:
 		p = unsafe.Pointer(y)
 	default:
 		log.Fatalf("Unknown type: %T", y)
