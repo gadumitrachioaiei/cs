@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"log"
 	"unsafe"
+
+	"github.com/gadumitrachioaiei/algorythms/circqueue"
 )
 
 type Representation int
@@ -55,4 +57,7 @@ func ShowBytes(x interface{}, size int, representation Representation) {
 
 	}
 	fmt.Println()
+	q := circqueue.New(10)
+	q.Push(1)
+	fmt.Println(q)
 }
